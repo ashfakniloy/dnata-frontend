@@ -14,12 +14,12 @@ function Footer() {
     <div className="bg-custom-gray2">
       <div className="container py-14 px-4">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-0 justify-between items-start">
-          <div className="flex flex-col self-center lg:self-start gap-6">
+          <div className="flex flex-col self-center lg:self-start">
             <Image
               src="/images/logos/dnata-logo2.png"
               alt="dnata logo"
-              width={228}
-              height={127}
+              width={320}
+              height={200}
             />
             <div className="flex justify-center gap-6 text-2xl text-white">
               <span>
