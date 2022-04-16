@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import { MdClose, MdMenu } from "react-icons/md";
 import { motion, useCycle } from "framer-motion";
@@ -6,6 +7,7 @@ import Dropdown from "./Dropdown";
 
 function Header() {
   const [isOpen, toggleOpen] = useCycle(false, true);
+  const router = useRouter();
 
   const button = {
     initial: {
@@ -16,6 +18,9 @@ function Header() {
     },
   };
 
+  const activeClass = (props) =>
+    router.pathname === props ? "text-custom-blue3" : "";
+
   return (
     <div>
       <div className="bg-custom-blue">
@@ -25,8 +30,8 @@ function Header() {
               <Image
                 src="/images/logos/logo.png"
                 alt="dnata logo"
-                width={180}
-                height={105}
+                width={228}
+                height={127}
               />
             </div>
           </Link>
@@ -54,32 +59,56 @@ function Header() {
 
           <div className="hidden lg:flex justify-between items-center gap-8 text-base text-custom-blue2 font-bold">
             <Link href="/flight" passHref>
-              <a className="hover:text-custom-blue3 transition duration-300">
+              <a
+                className={`hover:text-custom-blue3 transition duration-300 ${activeClass(
+                  "/flight"
+                )}`}
+              >
                 Flight
               </a>
             </Link>
             <Link href="/hotel" passHref>
-              <a className="hover:text-custom-blue3 transition duration-300">
+              <a
+                className={`hover:text-custom-blue3 transition duration-300 ${activeClass(
+                  "/hotel"
+                )}`}
+              >
                 Hotel
               </a>
             </Link>
             <Link href="/visa" passHref>
-              <a className="hover:text-custom-blue3 transition duration-300">
+              <a
+                className={`hover:text-custom-blue3 transition duration-300 ${activeClass(
+                  "/visa"
+                )}`}
+              >
                 Visa
               </a>
             </Link>
             <Link href="/holiday" passHref>
-              <a className="hover:text-custom-blue3 transition duration-300">
+              <a
+                className={`hover:text-custom-blue3 transition duration-300 ${activeClass(
+                  "/holiday"
+                )}`}
+              >
                 Holiday
               </a>
             </Link>
             <Link href="/shipping" passHref>
-              <a className="hover:text-custom-blue3 transition duration-300">
+              <a
+                className={`hover:text-custom-blue3 transition duration-300 ${activeClass(
+                  "/shipping"
+                )}`}
+              >
                 Shipping
               </a>
             </Link>
             <Link href="/export-import" passHref>
-              <a className="hover:text-custom-blue3 transition duration-300">
+              <a
+                className={`hover:text-custom-blue3 transition duration-300 ${activeClass(
+                  "/export-import"
+                )}`}
+              >
                 Export/Import
               </a>
             </Link>
