@@ -19,7 +19,6 @@ function Home() {
             // height={1868}
             width={1975}
             height={1038}
-            priority
           />
         </div>
         <div className="h-[300px] container pt-10 px-4">
