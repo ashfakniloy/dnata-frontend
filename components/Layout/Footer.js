@@ -16,7 +16,7 @@ function Footer() {
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-0 justify-between items-start">
           <div className="flex flex-col self-center lg:self-start gap-6">
             <Image
-              src="/images/logos/logo.png"
+              src="/images/logos/dnata-logo2.png"
               alt="dnata logo"
               width={228}
               height={127}
@@ -25,6 +25,7 @@ function Footer() {
               <span>
                 <a
                   href="https://www.facebook.com/DnataBD/"
+                  aria-label="facebook"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -34,6 +35,7 @@ function Footer() {
               <span>
                 <a
                   href="https://www.twitter.com/DnataBD/"
+                  aria-label="twitter"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -43,6 +45,7 @@ function Footer() {
               <span>
                 <a
                   href="https://www.instagram.com/DnataBD/"
+                  aria-label="instagram"
                   target="_blank"
                   rel="noreferrer"
                 >
