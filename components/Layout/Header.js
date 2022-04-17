@@ -24,14 +24,14 @@ function Header() {
   return (
     <div>
       <div className="bg-custom-blue">
-        <div className="container px-4 pt-3 pb-2 flex justify-between items-center">
+        <div className="container px-4  flex justify-between items-center">
           <Link href="/" passHref>
-            <div className="w-[85px] lg:w-[100px] lg:h-full">
+            <div className="w-[120px] lg:w-[160px] h-full">
               <Image
-                src="/images/logos/logo.png"
+                src="/images/logos/dnata-logo.png"
                 alt="dnata logo"
-                width={228}
-                height={127}
+                width={320}
+                height={200}
               />
             </div>
           </Link>
