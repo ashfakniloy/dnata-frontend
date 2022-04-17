@@ -58,7 +58,7 @@ function Footer() {
           <div className="mt-10 lg:mt-0 flex flex-col gap-5 text-sm font-bold">
             <p className="text-white">Contact Information</p>
             <div className="flex flex-col gap-3 text-gray-400">
-              <div className="">
+              <div>
                 <span>
                   <FaPhone className="inline mr-2" />
                 </span>
@@ -85,13 +85,6 @@ function Footer() {
                   &nbsp;|&nbsp;
                   <a
                     href="tel:+8802-9842924"
-                    className="hover:text-white transition duration-300"
-                  >
-                    9842924
-                  </a>
-                  &nbsp;|&nbsp;
-                  <a
-                    href="tel:+8802-9842925"
                     className="hover:text-white transition duration-300"
                   >
                     9842924
