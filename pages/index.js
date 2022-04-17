@@ -16,6 +16,7 @@ function Home() {
             src="/images/banners/home.jpg"
             alt="dnata banner"
             layout="responsive"
+            priority
             width={3556}
             height={1868}
           />
