@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { MdClose, MdMenu } from "react-icons/md";
 import { motion, useCycle } from "framer-motion";
-import Dropdown from "./Dropdown";
+import Sidebar from "./Sidebar";
 
 function Header() {
   const [isOpen, toggleOpen] = useCycle(false, true);
@@ -120,7 +120,7 @@ function Header() {
           </div>
         </div>
       </div>
-      <Dropdown isOpen={isOpen} toggleOpen={toggleOpen} />
+      <Sidebar isOpen={isOpen} toggleOpen={toggleOpen} />
     </div>
   );
 }
