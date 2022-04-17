@@ -15,10 +15,9 @@ function Home() {
           <Image
             src="/images/banners/home.jpg"
             alt="dnata banner"
-            // width={3556}
-            // height={1868}
-            width={1975}
-            height={1038}
+            layout="responsive"
+            width={3556}
+            height={1868}
           />
         </div>
         <div className="h-[300px] container pt-10 px-4">
