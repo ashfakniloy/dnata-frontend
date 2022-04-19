@@ -18,8 +18,8 @@ function Header() {
     },
   };
 
-  const activeClass = (props) =>
-    router.pathname === props ? "text-custom-blue3" : "";
+  const activeClass = (path) =>
+    router.pathname === path ? "text-custom-blue3" : "";
 
   return (
     <div>
@@ -110,6 +110,15 @@ function Header() {
                 )}`}
               >
                 Export/Import
+              </a>
+            </Link>
+            <Link href="/about-us" passHref>
+              <a
+                className={`hover:text-custom-blue3 transition duration-300 ${activeClass(
+                  "/about-us"
+                )}`}
+              >
+                About Us
               </a>
             </Link>
             <Link href="/contact" passHref>

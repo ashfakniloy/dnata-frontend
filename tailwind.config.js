@@ -12,8 +12,7 @@ module.exports = {
         "custom-blue": "#E9F6FC",
         "custom-blue2": "#0094D5",
         "custom-blue3": "#0C5598",
-        "custom-gray": "#7A7A7a",
-        "custom-gray2": "#2E3132",
+        "custom-blue4": "#B4D0E5",
       },
       container: {
         center: true,

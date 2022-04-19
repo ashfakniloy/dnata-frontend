@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { MdClose } from "react-icons/md";
 import { motion } from "framer-motion";
 
-function Sidebar({ isOpen, toggleOpen }) {
+function Dropdown({ isOpen, toggleOpen }) {
   const slide = {
     initial: {
       x: "90vw",
@@ -15,6 +16,10 @@ function Sidebar({ isOpen, toggleOpen }) {
     },
   };
 
+  const router = useRouter();
+
+  const activeClass = (path) => (router.pathname === path ? "text-black" : "");
+
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add("active-sidebar");
@@ -25,25 +30,40 @@ function Sidebar({ isOpen, toggleOpen }) {
 
   return (
     <motion.div
-      className="lg:hidden fixed overflow-y-scroll right-0 left-14 inset-y-0 bg-custom-gray2 z-10"
+      className="lg:hidden fixed overflow-y-scroll right-0 left-14 inset-y-0 bg-custom-blue4 z-10"
       variants={slide}
       initial={false}
       animate={isOpen ? "animate" : "initial"}
       transition={{ duration: 0.3 }}
     >
-      <div className="px-6 py-5 flex flex-col gap-2 text-white font-bold">
+      <div className="px-5 py-5 flex flex-col gap-2 text-fuchsia-700 font-bold">
         <span
-          className="text-white text-2xl mb-5 self-end hover:rotate-90 transition duration-300"
+          className=" text-2xl mb-5 self-end hover:rotate-90 transition duration-300"
           onClick={() => toggleOpen()}
         >
           <MdClose />
         </span>
-        <Link href="/flight">Flight</Link>
-        <Link href="/hotel">Hotel</Link>
-        <Link href="/visa">Visa</Link>
-        <Link href="/holiday">Holiday</Link>
-        <Link href="/shipping">Shipping</Link>
-        <Link href="/export-import">Export/Import</Link>
+        <Link href="/flight" passHref>
+          <a className={activeClass("/flight")}>Flight</a>
+        </Link>
+        <Link href="/hotel" passHref>
+          <a className={activeClass("/hotel")}>Hotel</a>
+        </Link>
+        <Link href="/visa" passHref>
+          <a className={activeClass("/visa")}>Visa</a>
+        </Link>
+        <Link href="/holiday" passHref>
+          <a className={activeClass("/holiday")}>Holiday</a>
+        </Link>
+        <Link href="/shipping" passHref>
+          <a className={activeClass("/shipping")}>Shipping</a>
+        </Link>
+        <Link href="/export-import" passHref>
+          <a className={activeClass("/export-import")}>Export/Import</a>
+        </Link>
+        <Link href="/about-us" passHref>
+          <a className={activeClass("/about-us")}>About Us</a>
+        </Link>
 
         <div className="border-t mt-5 border-gray-500">
           <Link href="/contact" passHref>
@@ -57,4 +77,4 @@ function Sidebar({ isOpen, toggleOpen }) {
   );
 }
 
-export default Sidebar;
+export default Dropdown;
