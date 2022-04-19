@@ -15,7 +15,7 @@ function Footer() {
       <div className="container py-14 px-4">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-0 justify-between items-start">
           <div className="flex flex-col self-center lg:self-start -mt-10">
-            <div className="w-[320px] h-[200px]">
+            <div className="w-[160px] h-[100px]">
               <Image
                 src="/images/logos/dnata-logo.png"
                 alt="dnata logo"
@@ -24,7 +24,7 @@ function Footer() {
               />
             </div>
 
-            <div className="flex justify-center gap-6 text-2xl text-fuchsia-700">
+            <div className="mt-2 flex justify-center gap-6 text-2xl text-fuchsia-700">
               <span>
                 <a
                   href="https://www.facebook.com/DnataBD/"
