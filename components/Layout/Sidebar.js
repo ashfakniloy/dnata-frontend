@@ -18,7 +18,8 @@ function Dropdown({ isOpen, toggleOpen }) {
 
   const router = useRouter();
 
-  const activeClass = (path) => (router.pathname === path ? "text-black" : "");
+  const activeClass = (path) =>
+    router.pathname === path ? "text-gray-600" : "";
 
   useEffect(() => {
     if (isOpen) {
@@ -36,9 +37,9 @@ function Dropdown({ isOpen, toggleOpen }) {
       animate={isOpen ? "animate" : "initial"}
       transition={{ duration: 0.3 }}
     >
-      <div className="px-5 py-5 flex flex-col gap-2 text-fuchsia-700 font-bold">
+      <div className="px-5 py-5 flex flex-col gap-2 text-black font-bold">
         <span
-          className=" text-2xl mb-5 self-end hover:rotate-90 transition duration-300"
+          className="text-black text-2xl mt-2 mb-5 mr-1.5 self-end hover:rotate-90 transition duration-300"
           onClick={() => toggleOpen()}
         >
           <MdClose />

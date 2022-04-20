@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Layout from "../components/Layout";
 
 const pageDetails = {
@@ -10,7 +11,7 @@ const pageDetails = {
 function Home() {
   return (
     <Layout pageDetails={pageDetails}>
-      <div className="bg-custom-blue">
+      <div className="bg-white">
         <div>
           <Image
             src="/images/banners/home.jpg"
@@ -21,8 +22,44 @@ function Home() {
             height={1868}
           />
         </div>
-        <div className="h-[300px] container pt-10 px-4">
-          <h1 className="text-3xl font-bold">Home page content</h1>
+
+        <div className="my-10 lg:my-20 mx-4 lg:mx-10">
+          <Link href="/holiday" passHref>
+            <Image
+              src="/images/banners/escape-to-holiday.jpg"
+              alt="dnata banner"
+              layout="responsive"
+              priority
+              width={3556}
+              height={1868}
+            />
+          </Link>
+        </div>
+
+        <div className="">
+          <Link href="/shipping" passHref>
+            <Image
+              src="/images/banners/shipping-dnata.jpg"
+              alt="dnata banner"
+              layout="responsive"
+              priority
+              width={3556}
+              height={1868}
+            />
+          </Link>
+        </div>
+
+        <div className="">
+          <Link href="/flight" passHref>
+            <Image
+              src="/images/banners/travel-with-dnata-wide.jpg"
+              alt="dnata banner"
+              layout="responsive"
+              priority
+              width={3556}
+              height={1868}
+            />
+          </Link>
         </div>
       </div>
     </Layout>

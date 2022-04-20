@@ -48,13 +48,13 @@ function Header() {
             >
               <MdMenu className={!isOpen ? "block text-3xl" : "hidden"} />
             </motion.div>
-            <motion.div
+            {/* <motion.div
               variants={button}
               animate={isOpen ? "animate" : "initial"}
               transition={{ duration: 0.5 }}
             >
               <MdClose className={isOpen ? "block text-3xl" : "hidden"} />
-            </motion.div>
+            </motion.div> */}
           </button>
 
           <div className="hidden lg:flex justify-between items-center gap-8 text-base text-custom-blue2 font-bold">
