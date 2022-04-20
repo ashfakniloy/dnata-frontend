@@ -23,7 +23,7 @@ function TextField({ label, ...props }) {
             {...props}
           />
         )}
-        <p className="absolute -bottom-4 text-custom-red text-xs">
+        <p className="absolute -bottom-4 text-red-600 text-xs">
           <ErrorMessage name={field.name} />
         </p>
       </div>
