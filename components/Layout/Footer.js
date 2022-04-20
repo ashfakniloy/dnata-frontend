@@ -59,7 +59,7 @@ function Footer() {
           </div>
 
           <div className="mt-10 lg:mt-0 flex flex-col gap-4 w-full lg:w-[600px]">
-            <p className="text-white text-lg font-bold uppercase lg:mx-[60px]">
+            <p className="text-white text-lg font-bold lg:mx-[60px]">
               We Accept:
             </p>
             <div className="relative w-full lg:w-[600px] h-[50px] text-center">
